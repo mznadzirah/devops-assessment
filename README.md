@@ -31,8 +31,9 @@ Each folder includes its own `README.md` with more details
    ```bash
    cd terraform
    terraform init
-   terraform plan
-   terraform apply
+   // Pass specific instance type to variable
+   terraform plan -var="web_instance_type=t3.large" -var="backend_instance_type=t2.large"
+   terraform apply -var="web_instance_type=t3.large" -var="backend_instance_type=t2.large"
 
 ## Assumptions
 - This architecture designed for non-prod photo online editor web application.
